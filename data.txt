@@ -1,0 +1,25 @@
+venv\scripts\activate.bat
+uvicorn main:app --port 8000 --reload
+
+
+{
+'Rem_Sindical': 1464901.8, 
+'Tot_Sindical': 36622.55, 
+'Obr_Seguro': 9, 
+'Rem_Seguro': 1464901.8, 
+'Total_Seguro': 22351.32, 
+'Fdo_Desempleo': 142942.14, 
+'FICS': 2858.84, 
+'Otros_Conceptos': 4730.0, 
+'Obr_No_Afil': 0, 
+'Rem_No_Afil': 0.0, 
+'Aporte_Solid': 0.0, 
+'P_Fecha': datetime.datetime(2023, 5, 31, 0, 0), 
+'P_C_Sind': 36622.55, 
+'P_S_Vida': 22351.32, 
+'P_FICS': 36622.55, 
+'P_Otros': 4730.0, 
+'P_A_Solid': 0.0, 
+'P_Total': 66562.71, 
+'Inf_UOCRA': 'Fuera de Termino'
+}
