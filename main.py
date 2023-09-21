@@ -214,69 +214,69 @@ def get_periodo(mes:str, year:str):
 @app.get('/infracciones')
 def get_inf():
     inf =[]
-    #OS
-    os_imp = []
-    x = list(filter(lambda item: item['Inf_OS']=='Impago',sia))
-    for i in x:
-            os_imp.append(i['id'][-2:]+'/'+i['id'][0:4])
-    os_pac = []
-    os_pft = []
-    y = list(filter(lambda item: item['Inf_OS']=='Fuera de Termino',sia))
-    for i in y:
-            os_pft.append(i['id'][-2:]+'/'+i['id'][0:4])
-    #UOCRA
-    uo_cs=get_min_cs()
-    uo_sv=get_min_sv()
-    uo_as=get_min_as()
-    uo_ce=get_min_ce()
-    uo_fi=get_min_fi()
+    # #OS
+    # os_imp = []
+    # x = list(filter(lambda item: item['Inf_OS']=='Impago',sia))
+    # for i in x:
+    #         os_imp.append(i['id'][-2:]+'/'+i['id'][0:4])
+    # os_pac = []
+    # os_pft = []
+    # y = list(filter(lambda item: item['Inf_OS']=='Fuera de Termino',sia))
+    # for i in y:
+    #         os_pft.append(i['id'][-2:]+'/'+i['id'][0:4])
+    # #UOCRA
+    # uo_cs=get_min_cs()
+    # uo_sv=get_min_sv()
+    # uo_as=get_min_as()
+    # uo_ce=get_min_ce()
+    # uo_fi=get_min_fi()
 
-    uo_imp = {'cs':[],'sv':[],'ce':[],'as':[],'fi':[]}
-    uo_pac = {'cs':[],'sv':[],'ce':[],'as':[],'fi':[]}
-    uo_pft = {'cs':[],'sv':[],'ce':[],'as':[],'fi':[]}
+    # uo_imp = {'cs':[],'sv':[],'ce':[],'as':[],'fi':[]}
+    # uo_pac = {'cs':[],'sv':[],'ce':[],'as':[],'fi':[]}
+    # uo_pft = {'cs':[],'sv':[],'ce':[],'as':[],'fi':[]}
 
-    for i in uo_cs:
-        # print(i)
-        if i['cod']==4:
-            uo_imp['cs'].append(i['per'])
-        elif i['cod']==10:
-            uo_pac['cs'].append(i['per'])
-        elif i['cod']==1:
-            uo_pft['cs'].append(i['per'])
-    for i in uo_sv:
-        # print(i)
-        if i['cod']==4:
-            uo_imp['sv'].append(i['per'])
-        elif i['cod']==10:
-            uo_pac['sv'].append(i['per'])
-        elif i['cod']==1:
-            uo_pft['sv'].append(i['per'])
-    for i in uo_as:
-        # print(i)
-        if i['cod']==4:
-            uo_imp['as'].append(i['per'])
-        elif i['cod']==10:
-            uo_pac['as'].append(i['per'])
-        elif i['cod']==1:
-            uo_pft['as'].append(i['per'])
-    for i in uo_ce:
-        # print(i)
-        if i['cod']==4:
-            uo_imp['ce'].append(i['per'])
-        elif i['cod']==10:
-            uo_pac['ce'].append(i['per'])
-        elif i['cod']==1:
-            uo_pft['ce'].append(i['per'])
-    for i in uo_fi:
-        # print(i)
-        if i['cod']==4:
-            uo_imp['fi'].append(i['per'])
-        elif i['cod']==10:
-            uo_pac['fi'].append(i['per'])
-        elif i['cod']==1:
-            uo_pft['fi'].append(i['per'])
+    # for i in uo_cs:
+    #     # print(i)
+    #     if i['cod']==4:
+    #         uo_imp['cs'].append(i['per'])
+    #     elif i['cod']==10:
+    #         uo_pac['cs'].append(i['per'])
+    #     elif i['cod']==1:
+    #         uo_pft['cs'].append(i['per'])
+    # for i in uo_sv:
+    #     # print(i)
+    #     if i['cod']==4:
+    #         uo_imp['sv'].append(i['per'])
+    #     elif i['cod']==10:
+    #         uo_pac['sv'].append(i['per'])
+    #     elif i['cod']==1:
+    #         uo_pft['sv'].append(i['per'])
+    # for i in uo_as:
+    #     # print(i)
+    #     if i['cod']==4:
+    #         uo_imp['as'].append(i['per'])
+    #     elif i['cod']==10:
+    #         uo_pac['as'].append(i['per'])
+    #     elif i['cod']==1:
+    #         uo_pft['as'].append(i['per'])
+    # for i in uo_ce:
+    #     # print(i)
+    #     if i['cod']==4:
+    #         uo_imp['ce'].append(i['per'])
+    #     elif i['cod']==10:
+    #         uo_pac['ce'].append(i['per'])
+    #     elif i['cod']==1:
+    #         uo_pft['ce'].append(i['per'])
+    # for i in uo_fi:
+    #     # print(i)
+    #     if i['cod']==4:
+    #         uo_imp['fi'].append(i['per'])
+    #     elif i['cod']==10:
+    #         uo_pac['fi'].append(i['per'])
+    #     elif i['cod']==1:
+    #         uo_pft['fi'].append(i['per'])
  
-    inf ={'os_imp':os_imp,'os_pac':os_pac,'os_pft':os_pft,'uo_imp':uo_imp,'uo_pac':uo_pac,'uo_pft':uo_pft}
+    # inf ={'os_imp':os_imp,'os_pac':os_pac,'os_pft':os_pft,'uo_imp':uo_imp,'uo_pac':uo_pac,'uo_pft':uo_pft}
     return inf
 
 @app.get('/min_os')
