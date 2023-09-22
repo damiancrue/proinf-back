@@ -6,6 +6,7 @@ import shutil
 from typing import List
 from leer_sia_todo import leer_sia
 from leerTodo import leer_carpeta
+
 import os
 
 app = FastAPI()
@@ -452,7 +453,6 @@ def delete():
         # Iteramos sobre los archivos en el oasys y los eliminamos uno por uno
         for archivo in os.listdir(oasys):
             ruta_completa = os.path.join(oasys, archivo)
-            
             # Verificamos si es un archivo y no un oasys
             if os.path.isfile(ruta_completa):
                 try:
@@ -462,5 +462,3 @@ def delete():
                     print(f"No se pudo eliminar {ruta_completa}: {e}")
     else:
         print(f"El directorio {oasys} no existe o no es un directorio válido.")
-
-

@@ -5,12 +5,12 @@ ENV PYTHONUNBUFFERED=1
 
 WORKDIR /app
 
-COPY requeriments.txt .
+COPY requirements.txt .
 RUN python -m venv venv
 
 RUN /bin/bash -c "source venv/bin/activate"
 
-RUN pip install -r requeriments.txt
+RUN pip install -r requirements.txt
 
 COPY . .
 
